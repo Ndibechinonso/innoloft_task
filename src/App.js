@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.scss";
+import DashboardLayout from "./pages/Dashboard";
+import Home from "./pages/Dashboard/Home/index";
+import Investment from "./pages/Dashboard/Investment";
+import SendMoney from "./pages/Dashboard/SendMoney";
+import Loan from "./pages/Dashboard/Loan";
+import Cards from "./pages/Dashboard/Cards";
+import Transactions from "./pages/Dashboard/Transactions";
+import Marketplace from "./pages/Dashboard/Marketplace";
+import Settings from "./pages/Dashboard/Settings";
+import NotFound from "./pages/Dashboard/NotFound";
 
-function App() {
+const appRoutes = [
+  { path: "/", component: <Home /> },
+  { path: "/send", component: <SendMoney /> },
+  { path: "/investment", component: <Investment /> },
+  { path: "/loan", component: <Loan /> },
+  { path: "/cards", component: <Cards /> },
+  { path: "/transactions", component: <Transactions /> },
+  { path: "/marketplace", component: <Marketplace /> },
+  { path: "/settings", component: <Settings /> },
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Router>
+        <Routes>
+          {appRoutes.map(({ path, component }, i) => (
+            <Route
+              key={i}
+              path={path}
+              element={<DashboardLayout children={component} />}
+            />
+          ))}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

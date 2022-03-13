@@ -1,0 +1,76 @@
+#sidenav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--sidenav-width);
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 22px;
+  background-color: #fff;
+  .logout-div {
+    margin-bottom: 0;
+    span {
+      color: #db261b;
+    }
+  }
+}
+
+#sidenav .nav-link {
+  font-weight: 400;
+  color: var(--nav-color) !important ;
+  font-size: 1em;
+  padding: 17px 19px;
+  transition: all 0.1s ease-in-out;
+  font-size: 14px;
+  line-height: 21px;
+  min-width: 162px;
+}
+
+#sidenav .nav-link.active {
+  background: var(--nav-active-bg);
+  border-radius: 10px;
+}
+
+.sidenav-link.active {
+  color: var(--nav-color) !important ;
+  background: var(--nav-active-bg);
+  border-radius: 10px;
+}
+
+#navbar a {
+  color: var(--nav-color) !important ;
+}
+
+#navbar ul li {
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 991px) {
+  #sidenav-content {
+    margin-top: 0px;
+    overflow-x: hidden;
+  }
+
+  #sidenav {
+    width: 0px !important;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin-left: 0;
+    height: 100vh;
+    overflow-y: hidden;
+    padding: 0px;
+  }
+  .toggled {
+    width: var(--sidenav-width) !important;
+  }
+  #sidenav.toggled {
+    padding: 20px;
+    width: var(--sidenav-width) !important;
+  }
+}
