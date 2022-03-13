@@ -2,10 +2,6 @@
   height: 100vh;
   overflow-y: auto;
 }
-.mob-nav {
-  background: #f3f5fc !important;
-  padding: 30px 20px;
-}
 @media (min-width: 769px) {
   #main-area-conatiner {
     width: calc(100vw - var(--sidenav-width));

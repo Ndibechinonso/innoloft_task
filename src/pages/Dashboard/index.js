@@ -12,7 +12,7 @@ const DashboardLayout = ({ children }) => {
         <SideNav toggleNav={toggleNav} setToggleNav={setToggleNav} />
         <div id="main-area-conatiner">
           <div
-            className="d-flex d-lg-none mob-nav"
+            className="d-flex d-lg-none"
             style={{
               background: "#F3F5FC",
               paddingTop: "30px",
@@ -28,7 +28,7 @@ const DashboardLayout = ({ children }) => {
             />
             {toggleNav ? null : (
               <div style={{ margin: "auto" }}>
-                <img className="mob-icon" src={mobileLogo} alt="" />
+                <img src={mobileLogo} alt="" />
               </div>
             )}
           </div>

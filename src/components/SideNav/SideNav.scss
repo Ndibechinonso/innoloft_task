@@ -7,7 +7,7 @@
   height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
-  padding: 22px;
+  padding: 50px 22px;
   background-color: #fff;
   .logout-div {
     margin-bottom: 0;
@@ -21,11 +21,16 @@
   font-weight: 400;
   color: var(--nav-color) !important ;
   font-size: 1em;
-  padding: 17px 19px;
+  padding: 17px 19px !important;
   transition: all 0.1s ease-in-out;
   font-size: 14px;
   line-height: 21px;
   min-width: 162px;
+  border: 1px solid white;
+  border-radius: 10px;
+  &:hover{
+    border: 1px solid var(--nav-active-bg);
+  }
 }
 
 #sidenav .nav-link.active {
@@ -36,7 +41,6 @@
 .sidenav-link.active {
   color: var(--nav-color) !important ;
   background: var(--nav-active-bg);
-  border-radius: 10px;
 }
 
 #navbar a {

@@ -13,8 +13,8 @@ const SideNav = ({ toggleNav, setToggleNav }) => {
       <nav className="d-block">
         <div id="sidenav-content">
           <ul className="navbar-nav text-left">
-            <li className="mb-4">
-              <img src={cloudLogo} />
+            <li className="mb-4 text-center">
+              <img src={cloudLogo} style={{width: '136px'}}/>
             </li>
             {navItems.map((menu, i) => (
               <SideNavItem
