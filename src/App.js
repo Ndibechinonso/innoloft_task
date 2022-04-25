@@ -1,30 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 import DashboardLayout from "./pages/Dashboard";
 import Home from "./pages/Dashboard/Home/index";
-import Investment from "./pages/Dashboard/Investment";
-import SendMoney from "./pages/Dashboard/SendMoney";
-import Loan from "./pages/Dashboard/Loan";
-import Cards from "./pages/Dashboard/Cards";
-import Transactions from "./pages/Dashboard/Transactions";
-import Marketplace from "./pages/Dashboard/Marketplace";
-import Settings from "./pages/Dashboard/Settings";
+import Products from "./pages/Dashboard/Products/index";
 import NotFound from "./pages/Dashboard/NotFound";
 
 const appRoutes = [
   { path: "/", component: <Home /> },
-  { path: "/send", component: <SendMoney /> },
-  { path: "/investment", component: <Investment /> },
-  { path: "/loan", component: <Loan /> },
-  { path: "/cards", component: <Cards /> },
-  { path: "/transactions", component: <Transactions /> },
-  { path: "/marketplace", component: <Marketplace /> },
-  { path: "/settings", component: <Settings /> },
+  { path: "/products", component: <Products /> },
 ];
 
 const App = () => {
   return (
-    <div className="">
+    <Provider store={store}>
       <Router>
         <Routes>
           {appRoutes.map(({ path, component }, i) => (
@@ -37,7 +27,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
-    </div>
+    </Provider>
   );
 };
 

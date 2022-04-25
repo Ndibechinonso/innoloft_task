@@ -1,9 +1,8 @@
 .wrapper {
-  background: #f3f5fc;
-  padding: 50px 32px 55px 30px;
+  // background: #f3f5fc;
   height: 100vh;
   overflow-y: auto;
-  min-width: calc(100vw - var(--sidenav-width));
+  width: calc(100vw - var(--sidenav-width));
 }
 
 @media (max-width: 991px) {

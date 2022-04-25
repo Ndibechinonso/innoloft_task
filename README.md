@@ -1,4 +1,4 @@
 A test App built with ReactJs
-github link: https://github.com/Ndibechinonso/mmgApp
+github link: 
 
 hosted url: 

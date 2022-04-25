@@ -1,9 +1,8 @@
 import { useState } from "react";
 import "./SideNav.scss";
-import LogoutIcon from "../SideNavIcons/logout";
 import SIDE_MENU_ITEMS from "./sideMenu";
+import innologo from "../../assets/icons/innoLogo.svg";
 import SideNavItem from "./SideNavItem";
-import cloudLogo from "../../assets/icons/cloudbank-logo.svg";
 
 const SideNav = ({ toggleNav, setToggleNav }) => {
   const [navItems, setNavItems] = useState(SIDE_MENU_ITEMS);
@@ -14,7 +13,7 @@ const SideNav = ({ toggleNav, setToggleNav }) => {
         <div id="sidenav-content">
           <ul className="navbar-nav text-left">
             <li className="mb-4 text-center">
-              <img src={cloudLogo} style={{width: '136px'}}/>
+              <img src={innologo} style={{width: '136px'}}/>
             </li>
             {navItems.map((menu, i) => (
               <SideNavItem
@@ -30,15 +29,7 @@ const SideNav = ({ toggleNav, setToggleNav }) => {
           </ul>
         </div>
       </nav>
-      <li className="nav-item d-flex sidenav-link cursor-pointer logout-div mt-auto">
-        <span
-          className="me-4 d-flex justify-content-end"
-          style={{ width: "20px" }}
-        >
-          <LogoutIcon />
-        </span>
-        <span>Logout</span>
-      </li>
+  
     </div>
   );
 };

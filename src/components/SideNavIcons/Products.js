@@ -1,4 +1,4 @@
-const Marketplace = ({ isActive }) => {
+const Products = ({ isActive }) => {
   return isActive ? (
     <svg
       width="22"
@@ -147,4 +147,4 @@ const Marketplace = ({ isActive }) => {
     </svg>
   );
 };
-export default Marketplace;
+export default Products;
