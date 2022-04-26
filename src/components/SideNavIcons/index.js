@@ -1,8 +1,6 @@
 import Home from "./Home";
 import Products from "./Products";
 
-
-
 const SideNavIcon = ({ isActive, tab }) => {
   switch (tab) {
     case "/":

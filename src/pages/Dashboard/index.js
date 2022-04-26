@@ -3,13 +3,15 @@ import SideNav from "../../components/SideNav/SideNav";
 import innologo from "../../assets/icons/innoLogo.svg";
 import toggler from "../../assets/icons/toggler.svg";
 import "./style.scss";
+
 const DashboardLayout = ({ children }) => {
   const [toggleNav, setToggleNav] = useState(false);
+
+  // config fetch
   const stringifiedConfig = localStorage.getItem("configObj");
   const parsedConfig = JSON.parse(stringifiedConfig);
   const mainColor = parsedConfig.mainColor;
 
-  console.log(parsedConfig, "kk");
   useEffect(() => {}, []);
   return (
     <Fragment>
@@ -18,7 +20,7 @@ const DashboardLayout = ({ children }) => {
         style={{ background: mainColor, width: "100vw", height: "40px" }}
       >
         {" "}
-        <img src={innologo} style={{ width: "136px" }} />{" "}
+        <img src={innologo} style={{ width: "136px" }} alt=""/>{" "}
       </div>
       <div className="d-flex">
         <SideNav toggleNav={toggleNav} setToggleNav={setToggleNav} />

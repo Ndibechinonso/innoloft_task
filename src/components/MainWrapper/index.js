@@ -1,11 +1,9 @@
 import "./style.scss";
-import { Container } from "react-bootstrap";
+
 const MainWrapper = ({ children }) => {
-  return(
-    <div className="Container">
-  <div className="wrapper">{children}</div>
-  </div>
-  )
+  return (
+      <div className="wrapper" style={{width: "100%"}}>{children}</div>
+  );
 };
 
 export default MainWrapper;

@@ -1,4 +1,3 @@
-A test App built with ReactJs
-github link: 
+A test App built with ReactJs and Redux
 
-hosted url: 
+github link: 

@@ -13,7 +13,7 @@ const SideNav = ({ toggleNav, setToggleNav }) => {
         <div id="sidenav-content">
           <ul className="navbar-nav text-left">
             <li className="mb-4 text-center">
-              <img src={innologo} style={{width: '136px'}}/>
+              <img src={innologo} style={{ width: "136px" }} alt=""/>
             </li>
             {navItems.map((menu, i) => (
               <SideNavItem
@@ -29,7 +29,6 @@ const SideNav = ({ toggleNav, setToggleNav }) => {
           </ul>
         </div>
       </nav>
-  
     </div>
   );
 };

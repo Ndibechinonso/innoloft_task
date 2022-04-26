@@ -20,7 +20,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  display: none;
 }
 
 /* Track */
@@ -41,6 +41,13 @@ body {
 
 .component-bg{
   background-color: #f3f5fc;
+}
+
+.product-info-select{
+  select{
+    max-width: 50%;
+    width: 100%;
+  }
 }
 @media (max-width: 991px) {
   #main-area-conatiner {

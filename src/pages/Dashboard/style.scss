@@ -1,17 +1,23 @@
 #main-area-conatiner {
   height: 100vh;
   overflow-y: auto;
+  padding-top: 45px;
+  width: 100vw;
 }
 .top-nav{
   position: sticky;
   top: 0;
   z-index: 10000;
 }
-@media (min-width: 769px) {
+@media (max-width: 1000px) {
   #main-area-conatiner {
-    width: calc(100vw - var(--sidenav-width));
-    height: 100vh;
-    // overflow-y: auto;
-    padding-top: 45px;
+    padding-top: 0 !important;
+
   }
 }
+@media (min-width: 991px) {
+  #main-area-conatiner {
+    width: calc(100vw - var(--sidenav-width));
+  }
+}
+

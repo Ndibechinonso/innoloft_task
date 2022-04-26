@@ -12,10 +12,10 @@ const fetchProductsRequest = () => {
     };
 };
 
-const fetchProductsSuccess = (user) => {
+const fetchProductsSuccess = (productData) => {
     return {
         type: PRODUCTS_DATA_SUCCESS,
-        payload: user,
+        payload: productData,
     };
 };
 
@@ -39,11 +39,14 @@ export const fetchProductsData = () => {
          const  productReq =  axios.get(
                     `${api_base}product/6781/`,                  
                 )
-                axios.all([configReq, productReq]).then(axios.spread((...responses)=> {
+        const tlr = axios.get(`${api_base}trl/`)
+                axios.all([configReq, productReq, tlr]).then(axios.spread((...responses)=> {
                     const configResponse = responses[0]
                     const stringifiedConfig = JSON.stringify(configResponse.data)
                     localStorage.setItem("configObj", stringifiedConfig)
                     const productResponse = responses[1]
+                    const trlResponse = responses[2]
+                    console.log(trlResponse, 'KKK');
                     dispatch(fetchProductsSuccess(productResponse.data));
                 })) 
                 .catch((errors) => {
@@ -51,3 +54,5 @@ export const fetchProductsData = () => {
                 });
         };
 };
+
+
